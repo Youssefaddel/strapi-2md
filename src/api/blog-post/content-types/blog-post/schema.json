@@ -46,7 +46,12 @@
         "shared.rich-text",
         "shared.media",
         "shared.quote"
-      ]
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "date": {
       "type": "date",
