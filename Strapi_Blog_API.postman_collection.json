@@ -1,0 +1,132 @@
+{
+  "info": {
+    "name": "Strapi Blog API",
+    "description": "API endpoints for the Strapi-managed Blog",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Blog Posts",
+      "item": [
+        {
+          "name": "Get All Blog Posts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:1337/api/blog-posts?populate=*",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "1337",
+              "path": [
+                "api",
+                "blog-posts"
+              ],
+              "query": [
+                {
+                  "key": "populate",
+                  "value": "*"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Single Blog Post by Slug",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:1337/api/blog-posts?filters[slug][$eq]=YOUR-SLUG-HERE&populate=*",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "1337",
+              "path": [
+                "api",
+                "blog-posts"
+              ],
+              "query": [
+                {
+                  "key": "filters[slug][$eq]",
+                  "value": "YOUR-SLUG-HERE"
+                },
+                {
+                  "key": "populate",
+                  "value": "*"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Categories",
+      "item": [
+        {
+          "name": "Get All Categories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:1337/api/blog-categories?populate=*",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "1337",
+              "path": [
+                "api",
+                "blog-categories"
+              ],
+              "query": [
+                {
+                  "key": "populate",
+                  "value": "*"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Tags",
+      "item": [
+        {
+          "name": "Get All Tags",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:1337/api/blog-tags?populate=*",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "1337",
+              "path": [
+                "api",
+                "blog-tags"
+              ],
+              "query": [
+                {
+                  "key": "populate",
+                  "value": "*"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
