@@ -508,7 +508,12 @@ export interface ApiBlogPostBlogPost extends Struct.CollectionTypeSchema {
     >;
     content: Schema.Attribute.DynamicZone<
       ['shared.rich-text', 'shared.media', 'shared.quote']
-    >;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     coverImage: Schema.Attribute.Media<'images'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

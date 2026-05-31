@@ -20,10 +20,11 @@ const config = [
     {
         name: 'strapi::cors',
         config: {
-            enabled: true,
             headers: '*',
-            // Allow Angular portal in dev and production
+            // Allow local admin and Angular portals
             origin: [
+                'http://localhost:1337',
+                'http://127.0.0.1:1337',
                 'http://localhost:4200',
                 'http://localhost:4201',
                 /^https?:\/\/.*\.estecharat\.com$/,

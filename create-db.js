@@ -5,7 +5,7 @@ const client = new Client({
   port: 5432,
   user: 'postgres',
   password: 'admin',
-  database: 'postgres'
+  database: 'template1'
 });
 
 async function createDb() {
